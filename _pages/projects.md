@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Active and past research projects, grouped by area.
 nav: true
-nav_order: 3
-display_categories: [work, fun]
+nav_order: 4
+display_categories: [stroke, dosing, nlp, llm, multimodal, ai-evaluation, nephrology, cardiology, parkinsons, public-health, hypertension, triage]
 horizontal: false
 ---
 

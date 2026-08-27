@@ -1,0 +1,1 @@
+Maryum Ahmed is a Data Science master's student with a background in Bioinformatics in Dr. Tootooni's research group. She is particularly interested in healthcare applications of data science, and is currently contributing to projects involving topic modeling and the analysis of stroke triage and mis-triage in clinical settings.

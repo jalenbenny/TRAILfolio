@@ -2,33 +2,29 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Department of Health Informatics and Data Science &middot; Loyola University Chicago
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: lab_photo.jpg
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Mohammad Samie Tootooni, PhD</p>
+    <p>CTRE 447, 2160 S 1st Ave.</p>
+    <p>Maywood, IL 60153</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+The Tootooni Lab works at the intersection of artificial intelligence, clinical data, and patient care, spanning stroke triage, drug dosing, clinical NLP, and AI evaluation in healthcare settings. The lab is led by [Dr. Samie Tootooni](/people/), Assistant Professor in the Department of Health Informatics and Data Science, with a secondary appointment in the Center for Health Outcomes and Informatics Research (CHOIR) at Loyola University Chicago.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Our team brings together graduate research assistants, medical students, and undergraduates working across AI, NLP, and clinical informatics. See the full team on the [People](/people/) page, browse active and past work on the [Projects](/projects/) page, and find selected papers on [Publications](/publications/).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+**Interested in joining the lab?** The lab periodically has openings for postdoctoral research positions and student research assistants. Contact Dr. Tootooni at [mtootooni@luc.edu](mailto:mtootooni@luc.edu) or (708) 216-9181 for current availability, or see his [Loyola faculty profile](https://www.luc.edu/parkinson/ourpeople/facultystaffprofiles/mohammadsamietootoonifaculty.shtml).
