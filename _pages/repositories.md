@@ -2,46 +2,28 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+description: GitHub activity for lab members. Add each person's real GitHub username in _data/repositories.yml to populate their card.
 nav: true
-nav_order: 4
+nav_order: 7
 ---
 
-{% if site.data.repositories.github_users %}
+{% assign all_tags = site.data.repositories.lab_members | map: "tags" | flatten | uniq | sort %}
+{% include tag_filter.liquid container_id="repo-members" tags=all_tags %}
 
-## GitHub users
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
-  {% endfor %}
-</div>
-
----
-
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
-
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
+<div class="repositories">
+<div class="row row-cols-1 row-cols-md-3">
+{% for member in site.data.repositories.lab_members %}
+<div class="col mb-4 tag-filter-item" data-filter-group="repo-members" data-tags="{{ member.tags | join: ',' }}">
+  <div class="card h-100 p-3">
+    <h5>{{ member.name }}</h5>
+    <p class="text-muted mb-1">{{ member.role }}</p>
+    {% if member.github %}
+      {% include repository/repo_user.liquid username=member.github %}
+    {% else %}
+      <p><em>GitHub username not yet added — see _data/repositories.yml</em></p>
+    {% endif %}
   </div>
-
----
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-{% if site.data.repositories.github_repos %}
-
-## GitHub Repositories
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
 </div>
-{% endif %}
+{% endfor %}
+</div>
+</div>

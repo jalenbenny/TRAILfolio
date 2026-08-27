@@ -1,14 +1,46 @@
-github_users:
-  - torvalds
-  - alshedivat
-
+# Add each lab member's real GitHub username to the `github:` field below to
+# populate their repository/contribution card. Leave blank until you have it —
+# the page will show a placeholder instead of erroring.
 repo_description_lines_max: 2
 
-github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+lab_members:
+  - name: Samie Tootooni
+    role: Principal Investigator
+    github:
+    tags: [stroke, nlp, llm, vancomycin, hypertension, parkinsons, aki]
+  - name: Behnaz Eslami
+    role: Research Assistant
+    github:
+    tags: [nlp, llm, clinical-nlp]
+  - name: Dhruvin Patel
+    role: Research Assistant
+    github:
+    tags: [vancomycin, pharmacokinetics, parkinsons, aki]
+  - name: Maryum
+    role: Research Assistant
+    github:
+    tags: [hypertension]
+  - name: Ale
+    role: Research Assistant
+    github:
+    tags: [llm, ai-evaluation]
+  - name: Adnan
+    role: Research Assistant
+    github:
+    tags: [general]
+  - name: Michael
+    role: Research Assistant
+    github:
+    tags: [general]
+  - name: Pharel
+    role: Research Assistant
+    github:
+    tags: [general]
+  - name: Rahil
+    role: Research Assistant
+    github:
+    tags: [general]
+  - name: Ubeyd
+    role: Research Assistant
+    github:
+    tags: [general]

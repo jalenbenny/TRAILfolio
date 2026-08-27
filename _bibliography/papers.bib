@@ -1,32 +1,50 @@
 ---
 ---
 
-@unpublished{eslamiperformance,
-  title     = {A Performance-Based Voting Framework for Assertion Detection in Clinical Notes},
-  author    = {Eslami, B. and Dligach, D. and Strickland, B. and Azarvash, N. and Tootooni, M.S.},
-  note      = {Uses the MIMIC-III dataset. In preparation --- confirm venue and year before publishing.},
+@article{eslami2024voting,
+  title     = {A performance-based voting framework for assertion detection in clinical notes},
+  author    = {Eslami, Behnaz and Dligach, Dmitriy and Strickland, Benjamin and Azarvash, Nazanin and Tootooni, M Samie},
+  keywords  = {Clinical NLP, Assertion Detection, BioBERT, Named Entity Recognition, Electronic Health Records, Ensemble Voting},
+  abstract  = {This paper presents a performance-based voting framework that combines multiple pre-trained NLP models (including BioBERT and BiLSTM-CNN-Char) to accurately detect and classify clinical assertions -- polarity, and related categories -- in clinical notes.},
+  note      = {Data: MIMIC-III. Status: Completed. Contact: beslami@luc.edu},
 }
 
-@unpublished{eslamitoward,
+@article{eslami2024digitaltwins,
   title     = {Toward Digital Twins in the Intensive Care Unit: A Medication Management Case Study},
-  author    = {Eslami, B. and Afshar, M. and Tootooni, M.S. and Miller, T. and Churpek, M. and Gao, Y. and Dligach, D.},
-  note      = {Uses the MIMIC-III dataset. In preparation --- confirm venue and year before publishing.},
+  author    = {Eslami, Behnaz and Afshar, Majid and Tootooni, Samie and Miller, Timothy and Churpek, Matthew and Gao, Yanjun and Dligach, Dmitriy},
+  keywords  = {digital twins, large language models, intensive care unit},
+  abstract  = {This study shows that fine-tuning LLaMA-3 with LoRA on specialty-specific ICU physician notes (medical ICU) produces more accurate digital twin treatment recommendations, outperforming other-specialty and general fine-tuning baselines.},
+  note      = {Data: MIMIC-III. Status: Completed. Contact: beslami@luc.edu},
 }
 
-@unpublished{eslamihybrid,
+@article{eslami2026hybridontology,
   title     = {A Hybrid Language Framework for Ontology-Based Clinical Concept Extraction},
-  author    = {Eslami, B. and Dligach, D. and Azarvash, N. and de la Pena, P. and Strickland, B. and Tootooni, M.S.},
-  note      = {Uses the MIMIC-III dataset. In preparation --- confirm venue and year before publishing.},
+  author    = {Eslami, Behnaz and Dligach, Dmitriy and Azarvash, Nazanin and de la Pena, Paula and Strickland, Benjamin and Tootooni, Samie},
+  keywords  = {Clinical Concept Extraction, Large Language Models, UMLS Normalization, SNOMED CT, Named Entity Recognition},
+  abstract  = {This study introduces a hybrid ontology-based framework combining SparkNLP, SentenceBERT embeddings, zero-shot LLMs (LLaMA3-8B and Mistral-7B), and UMLS/SNOMED CT normalization for clinical concept extraction.},
+  note      = {Data: MIMIC-III. Status: Active (in progress). Contact: beslami@luc.edu},
 }
 
-@unpublished{eslamimapping,
+@article{eslami2026chiefcomplaints,
   title     = {Mapping Free-Text Chief Complaints to a Structured Clinical Taxonomy Using LLM-Based Soft Classification},
-  author    = {Eslami, B. and Dligach, D. and Azarvash, N. and Cichon, M.E. and Bobay, K.L. and Tootooni, M.S.},
-  note      = {Uses the Indiana University chief complaints dataset. In preparation --- confirm venue and year before publishing.},
+  author    = {Eslami, Behnaz and Dligach, Dmitriy and Azarvash, Nazanin and Cichon, Mark E and Bobay, Kathleen L and Tootooni, Samie},
+  keywords  = {Chief Complaints, Large Language Models, Multi-Label Classification},
+  abstract  = {This study introduces CCMapper-LLM, a zero-shot LLaMA-3.1-70B-based framework for mapping free-text emergency department chief complaints to a structured multi-label clinical taxonomy.},
+  note      = {Data: Indiana University chief complaints dataset. Status: Active (in progress). Contact: beslami@luc.edu},
 }
 
-@unpublished{eslamidiscovering,
+@article{eslami2026topicmodeling,
   title     = {Discovering Latent Clinical Patterns Through LLM-Based Topic Modeling and Large-Scale Concept Clustering},
-  author    = {Eslami, B. and Dligach, D. and Tootooni, M.S.},
-  note      = {Uses Loyola therapeutic inertia data. In preparation --- confirm venue and year before publishing.},
+  author    = {Eslami, Behnaz and Dligach, Dmitriy and Tootooni, Samie},
+  keywords  = {Topic Modeling, Large Language Models, Clustering},
+  abstract  = {This study presents an LLM-based framework that combines topic modeling with large-scale concept clustering to uncover latent patterns in clinical text, offering a scalable approach for identifying hidden themes.},
+  note      = {Data: Loyola therapeutic inertia data. Status: Active (in progress). Contact: beslami@luc.edu},
+}
+
+@article{kochari2026caroli,
+  title     = {Validating Caroli Disease/Syndrome Using LLM},
+  author    = {Kochari, A. and Tootooni, S. and Saban, M.},
+  keywords  = {Large Language Models, Caroli Disease, Caroli Syndrome, Ontology, PubMed, Biomedical Informatics, Validation},
+  abstract  = {This project uses an LLM to evaluate the medical content of the Caroli Disease and Syndrome Ontology (CaroliO), checking explicit ontology axioms and class relationships against biomedical evidence from PubMed.},
+  note      = {Data: CaroliO ontology (OWL) and published PubMed literature; no patient-level data. Status: Active (in progress). Contact: akochari@luc.edu},
 }
