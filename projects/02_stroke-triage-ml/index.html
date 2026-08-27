@@ -1,0 +1,249 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> EMS Stroke Triage Models | TRAIL Lab Dr. Tootooni's Research Lab </title> <meta name="author" content="TRAIL Lab Dr. Tootooni's Research Lab"> <meta name="description" content="Supervised models on routinely collected structured EMS encounter data that flag stroke and severe stroke at first patient contact."> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/TRAILfolio/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/TRAILfolio/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/TRAILfolio/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://jalenbenny.github.io/TRAILfolio/projects/02_stroke-triage-ml/"> <script src="/TRAILfolio/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/TRAILfolio/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/TRAILfolio/"> <span class="font-weight-bold">TRAIL</span> Lab Dr. Tootooni's Research Lab </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/people/">people </a> </li> <li class="nav-item active"> <a class="nav-link" href="/TRAILfolio/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/funding/">funding </a> </li> <li class="nav-item "> <a class="nav-link" href="/TRAILfolio/repositories/">repositories </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">EMS Stroke Triage Models</h1> <p class="post-description">Supervised models on routinely collected structured EMS encounter data that flag stroke and severe stroke at first patient contact.</p> </header> <article> <p>Machine learning models trained on routinely collected structured prehospital EMS records to predict stroke and severe stroke before hospital arrival.</p> <p><strong>Data availability:</strong> Uses EMS dataset with PHI. Code and config only.</p> <p><strong>Contact:</strong> <a href="mailto:msaban@luc.edu">msaban@luc.edu</a></p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 TRAIL Lab Dr. Tootooni's Research Lab. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/TRAILfolio/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/TRAILfolio/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/TRAILfolio/assets/al_math/js/mathjax-setup.js"></script> <script src="/TRAILfolio/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/TRAILfolio/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/TRAILfolio/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/TRAILfolio/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/TRAILfolio/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/TRAILfolio/assets/al_img_tools/js/zoom.js"></script> <script defer src="/TRAILfolio/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/TRAILfolio/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/TRAILfolio/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/TRAILfolio/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/publications/";
+          },
+        },{id: "nav-people",
+          title: "people",
+          description: "Members of the Tootooni Lab (Health Informatics &amp; Data Science, Loyola University Chicago)",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/people/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Active and past research projects. Filter by tag or browse by category.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/projects/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Courses taught by Dr. Tootooni in the Department of Health Informatics and Data Science.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/teaching/";
+          },
+        },{id: "nav-funding",
+          title: "funding",
+          description: "Extramural and intramural research funding for the lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/funding/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "GitHub activity for lab members. Add each person&#39;s real GitHub username in _data/repositories.yml to populate their card.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/TRAILfolio/repositories/";
+          },
+        },{id: "post-lab-blog-coming-soon",
+        
+          title: "Lab blog coming soon",
+        
+        description: "This section is a placeholder while we set up regular lab updates.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/TRAILfolio/blog/2026/blog-coming-soon/";
+          
+        },
+      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "projects-stroke-narrative-information-extraction",
+          title: 'Stroke Narrative Information Extraction',
+          description: "NLP over EMS ambulance narratives to identify what clinical information paramedics documented in the field.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/01_stroke-ems-narrative-nlp/";
+            },},{id: "projects-ems-stroke-triage-models",
+          title: 'EMS Stroke Triage Models',
+          description: "Supervised models on routinely collected structured EMS encounter data that flag stroke and severe stroke at first patient contact.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/02_stroke-triage-ml/";
+            },},{id: "projects-ems-workflow-determinant-assessment-cfir",
+          title: 'EMS Workflow Determinant Assessment (CFIR)',
+          description: "CFIR-guided pre-implementation assessment of EMS workflow determinants for an AI stroke triage tool.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/03_stroke-ems-workflow-cfir/";
+            },},{id: "projects-paramedic-co-design-and-trust-study",
+          title: 'Paramedic Co-Design and Trust Study',
+          description: "A qualitative study exploring how paramedics perceive and interact with an ML-based clinical decision support tool for prehospital stroke triage.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/04_stroke-codesign-paramedics/";
+            },},{id: "projects-economic-impact-of-ai-stroke-triage-cds",
+          title: 'Economic Impact of AI Stroke Triage CDS',
+          description: "Decision model of the cost impact of implementing AI-based prehospital stroke triage.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/05_stroke-cds-cost-model/";
+            },},{id: "projects-stroke-cost-burden-at-non-specialized-hospitals",
+          title: 'Stroke Cost Burden at Non-Specialized Hospitals',
+          description: "HCUP-NEDS analysis of costs for stroke patients arriving at hospitals without stroke certification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/06_stroke-neds-cost-burden/";
+            },},{id: "projects-stroke-center-access-by-drive-time",
+          title: 'Stroke Center Access by Drive Time',
+          description: "Geospatial analysis of stroke center access across Illinois by estimated drive time.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/07_stroke-center-drivetime/";
+            },},{id: "projects-multimodal-ehr-fusion-for-outcome-prediction",
+          title: 'Multimodal EHR Fusion for Outcome Prediction',
+          description: "Early, intermediate, and late fusion of structured EHR data with clinical notes for 30-day mortality prediction.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/08_mimic-multimodal-fusion/";
+            },},{id: "projects-structured-to-llm-soft-token-representation",
+          title: 'Structured-to-LLM Soft Token Representation',
+          description: "Learned projector that maps structured EHR records into soft tokens in a frozen LLM embedding space.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/09_ehr-soft-token-fusion/";
+            },},{id: "projects-mediqa-synur-2026-shared-task-system",
+          title: 'MEDIQA-SYNUR 2026 Shared Task System',
+          description: "Hybrid retrieval and LLM verification system for open-source schema-guided clinical information extraction of synthetic nursing transcripts.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/10_mediqa-synur-2026/";
+            },},{id: "projects-impact-of-area-deprivation-on-blood-pressure-control-in-hypertensive-patients",
+          title: 'Impact of Area Deprivation on Blood Pressure Control in Hypertensive Patients',
+          description: "Association between neighborhood area deprivation, blood pressure control, and therapeutic inertia in older hypertensive adults.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/11_adi-hypertension-therapeutic-inertia/";
+            },},{id: "projects-a-computer-vision-approach-for-melanopsin-derived-pupillary-light-reflex-analysis-in-parkinson-39-s-disease-detection",
+          title: 'A Computer Vision Approach for Melanopsin-Derived Pupillary Light Reflex Analysis in Parkinson&amp;#39;s Disease...',
+          description: "Computer vision pipeline that extracts melanopsin-driven pupillary light reflex features from video to detect Parkinson&#39;s disease.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/12_melanopsin-plr-parkinsons-detection/";
+            },},{id: "projects-a-bayesian-driven-two-compartment-model-algorithm-for-vancomycin-auc24-calculation",
+          title: 'A Bayesian-Driven Two-Compartment Model Algorithm for Vancomycin AUC24 Calculation',
+          description: "Bayesian two-compartment pharmacokinetic engine (Vanco24) for individualized vancomycin AUC24 estimation from EHR data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/13_vanco24-bayesian-auc24/";
+            },},{id: "projects-artificial-intelligence-in-medication-management-and-drug-dosing-in-critical-care",
+          title: 'Artificial Intelligence in Medication Management and Drug Dosing in Critical Care',
+          description: "Narrative review summarizing applications of artificial intelligence in medication management and drug dosing decision support in critical care.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/14_ai-medication-management-critical-care-review/";
+            },},{id: "projects-comparing-mdrd-and-ckd-epi-2021-baseline-creatinine-estimation-methods-for-kdigo-aki-staging-in-patients-without-a-known-baseline",
+          title: 'Comparing MDRD and CKD-EPI 2021 Baseline Creatinine Estimation Methods for KDIGO AKI Staging...',
+          description: "Compares MDRD- and CKD-EPI 2021-estimated baseline creatinine for KDIGO AKI staging when a true baseline serum creatinine is unavailable.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/15_mdrd-vs-ckdepi-baseline-scr-aki-staging/";
+            },},{id: "projects-machine-learning-prediction-of-vancomycin-auc24-using-vanco24-derived-labels-in-mimic-iv",
+          title: 'Machine Learning Prediction of Vancomycin AUC24 Using Vanco24-Derived Labels in MIMIC-IV',
+          description: "XGBoost model predicting future vancomycin AUC24 from clinical and dosing variables, trained on Vanco24-derived AUC labels across a large MIMIC-IV cohort.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/16_ml-prediction-vancomycin-auc24-mimic-iv/";
+            },},{id: "projects-llm-mediated-explainable-ai-for-clinician-facing-interpretation-of-pharmacokinetic-model-predictions",
+          title: 'LLM-Mediated Explainable AI for Clinician-Facing Interpretation of Pharmacokinetic Model Predictions',
+          description: "Framework that translates machine learning model explanations (e.g., SHAP) into plain-language narratives for clinicians using an LLM.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/17_llm-explainable-ai-pk-interpretation/";
+            },},{id: "projects-maryum-39-s-hypertension-project",
+          title: 'Maryum&amp;#39;s Hypertension Project',
+          description: "TODO — summary to be completed.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/18_maryum-hypertension/";
+            },},{id: "projects-ale-39-s-llm-as-a-judge-project",
+          title: 'Ale&amp;#39;s LLM-as-a-Judge Project',
+          description: "TODO — summary to be completed.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/19_ale-llm-as-a-judge/";
+            },},{id: "projects-validating-caroli-disease-syndrome-using-llm",
+          title: 'Validating Caroli Disease/Syndrome Using LLM',
+          description: "LLM-assisted validation of Caroli ontology axioms using biomedical evidence from published sources.",
+          section: "Projects",handler: () => {
+              window.location.href = "/TRAILfolio/projects/20_caroli-ontology-llm-validation/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%74%6F%6F%74%6F%6F%6E%69@%6C%75%63.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/TRAILfolio/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/TRAILfolio/assets/al_search/js/shortcut-key.js"></script> </body> </html>
