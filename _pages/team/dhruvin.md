@@ -1,0 +1,1 @@
+Dhruvin Patel is a Research Assistant who works across predictive modeling and clinical data pipelines: Transformer-based forecasting of Influenza-Like Illness, a computer vision pipeline for Parkinson's biomarkers, Bayesian vancomycin dosing optimization, a multi-institutional dosing data pipeline, AKI staging, and knowledge-graph-enhanced LLM reasoning.
