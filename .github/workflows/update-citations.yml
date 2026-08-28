@@ -10,6 +10,7 @@ on:
 jobs:
   update-citations:
     runs-on: ubuntu-latest
+    if: false
 
     steps:
       - name: Checkout repository

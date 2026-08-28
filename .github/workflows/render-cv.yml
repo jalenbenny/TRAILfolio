@@ -17,6 +17,7 @@ jobs:
   rendercv:
     name: RenderCV
     runs-on: ubuntu-latest
+    if: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
