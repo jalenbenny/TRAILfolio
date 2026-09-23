@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Toward Digital Twins in the Intensive Care Unit: A Medication Management Case Study
+title: "Toward Digital Twins in the Intensive Care Unit: A Medication Management Case Study"
 description: Fine-tuning LLaMA-3 with LoRA on specialty-specific ICU physician notes to produce digital twin medication recommendations.
 img:
 importance: 13

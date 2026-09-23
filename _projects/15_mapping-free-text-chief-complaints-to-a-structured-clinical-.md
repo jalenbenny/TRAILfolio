@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mapping Free-Text Chief Complaints to a Structured Clinical Taxonomy Using LLM-Based Soft Classification
-description: CCMapper-LLM: a zero-shot LLaMA-3.1-70B based framework for mapping free-text ED chief complaints to a structured multi-label clinical taxonomy.
+description: "CCMapper-LLM: a zero-shot LLaMA-3.1-70B based framework for mapping free-text ED chief complaints to a structured multi-label clinical taxonomy."
 img:
 importance: 15
 category: active
