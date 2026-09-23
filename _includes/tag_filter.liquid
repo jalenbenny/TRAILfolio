@@ -1,0 +1,52 @@
+{% comment %}
+  Renders a row of tag-filter pill buttons plus a "all" button, and the
+  client-side JS that shows/hides sibling cards based on which pill is
+  active. Works together with the search boxes on projects.md and
+  repositories.md, which toggle the same "tag-filter-hidden" class.
+
+  Params:
+    container_id - string, must match the data-filter-group value used on
+                   the item wrapper divs on the page
+    tags         - array of tag strings to render as pills
+{% endcomment %}
+<div class="tag-filter mb-3" id="{{ include.container_id }}-filter" data-filter-group-controls="{{ include.container_id }}">
+  <button type="button" class="btn btn-sm btn-primary tag-filter-btn active" data-tag="all">all</button>
+  {% for tag in include.tags %}
+  <button type="button" class="btn btn-sm btn-outline-secondary tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+  {% endfor %}
+</div>
+
+<style>
+  .tag-filter-hidden { display: none !important; }
+  .tag-filter .tag-filter-btn { margin: 0 0.25rem 0.5rem 0; }
+</style>
+
+<script>
+(function () {
+  var filterId = {{ include.container_id | jsonify }};
+  var container = document.getElementById(filterId + "-filter");
+  if (!container) return;
+
+  var buttons = container.querySelectorAll(".tag-filter-btn");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      buttons.forEach(function (b) {
+        b.classList.remove("active", "btn-primary");
+        b.classList.add("btn-outline-secondary");
+      });
+      btn.classList.add("active", "btn-primary");
+      btn.classList.remove("btn-outline-secondary");
+
+      var tag = btn.getAttribute("data-tag");
+      document.querySelectorAll('[data-filter-group="' + filterId + '"]').forEach(function (item) {
+        if (tag === "all") {
+          item.classList.remove("tag-filter-hidden");
+          return;
+        }
+        var itemTags = (item.getAttribute("data-tags") || "").split(",");
+        item.classList.toggle("tag-filter-hidden", itemTags.indexOf(tag) === -1);
+      });
+    });
+  });
+})();
+</script>

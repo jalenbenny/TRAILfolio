@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-filter-group="repo-members"]').forEach(function (item) {
       var text = item.textContent.toLowerCase();
       var matches = text.indexOf(query) !== -1;
-      item.classList.toggle('d-none', !matches);
+      item.classList.toggle('tag-filter-hidden', !matches);
     });
   });
 });

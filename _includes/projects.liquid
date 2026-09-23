@@ -1,0 +1,24 @@
+{% comment %}
+  Renders one project card. Expects `project` to be in scope from the
+  enclosing {% for project in sorted_projects %} loop in _pages/projects.md.
+{% endcomment %}
+<div class="card h-100 p-3">
+  {% if project.img %}
+  <img src="{{ project.img | relative_url }}" class="card-img-top mb-2" alt="{{ project.title }}">
+  {% endif %}
+  <div class="card-body p-0">
+    <h5 class="card-title mb-1">
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    </h5>
+    {% if project.description %}
+    <p class="card-text text-muted small mb-2">{{ project.description }}</p>
+    {% endif %}
+    {% if project.tags %}
+    <div class="project-tags">
+      {% for tag in project.tags %}
+      <span class="badge bg-secondary me-1">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>

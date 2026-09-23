@@ -1,0 +1,21 @@
+{% comment %}
+  Renders a lab member's GitHub card: a link to their profile plus a
+  stats image from the external_services.github_readme_stats_url
+  instance configured in _config.yml.
+
+  Params:
+    username - GitHub username, required
+{% endcomment %}
+{% if include.username %}
+<p class="mb-2">
+  <a href="https://github.com/{{ include.username }}" target="_blank" rel="noopener">
+    github.com/{{ include.username }}
+  </a>
+</p>
+<img
+  src="{{ site.external_services.github_readme_stats_url }}/api?username={{ include.username }}&show_icons=true&theme={{ site.repo_theme_light | default: 'default' }}&hide_border=true"
+  alt="{{ include.username }} GitHub stats"
+  class="img-fluid rounded"
+  loading="lazy"
+  onerror="this.style.display='none'">
+{% endif %}
