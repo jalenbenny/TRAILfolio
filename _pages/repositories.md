@@ -7,6 +7,10 @@ nav: true
 nav_order: 7
 ---
 
+<div class="mb-3">
+  <input type="text" id="repo-search" class="form-control" placeholder="Search lab members by name, role, or tag...">
+</div>
+
 {% assign all_tags = site.data.repositories.lab_members | map: "tags" | flatten | uniq | sort %}
 {% include tag_filter.liquid container_id="repo-members" tags=all_tags %}
 
@@ -20,10 +24,25 @@ nav_order: 7
     {% if member.github %}
       {% include repository/repo_user.liquid username=member.github %}
     {% else %}
-      <p><em>GitHub username not yet added — see _data/repositories.yml</em></p>
+      <p><em>GitHub username not yet added, see _data/repositories.yml</em></p>
     {% endif %}
   </div>
 </div>
 {% endfor %}
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById('repo-search');
+  if (!input) return;
+  input.addEventListener('input', function () {
+    var query = input.value.trim().toLowerCase();
+    document.querySelectorAll('[data-filter-group="repo-members"]').forEach(function (item) {
+      var text = item.textContent.toLowerCase();
+      var matches = text.indexOf(query) !== -1;
+      item.classList.toggle('d-none', !matches);
+    });
+  });
+});
+</script>

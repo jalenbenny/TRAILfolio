@@ -11,6 +11,10 @@ horizontal: false
 
 <!-- pages/projects.md -->
 
+<div class="mb-3">
+  <input type="text" id="project-search" class="form-control" placeholder="Search projects by title, tag, or team member...">
+</div>
+
 {% assign all_tags = site.projects | map: "tags" | flatten | uniq | sort %}
 {% include tag_filter.liquid container_id="projects-list" tags=all_tags %}
 
@@ -24,3 +28,18 @@ horizontal: false
 {% endfor %}
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById('project-search');
+  if (!input) return;
+  input.addEventListener('input', function () {
+    var query = input.value.trim().toLowerCase();
+    document.querySelectorAll('[data-filter-group="projects-list"]').forEach(function (item) {
+      var text = item.textContent.toLowerCase();
+      var matches = text.indexOf(query) !== -1;
+      item.classList.toggle('d-none', !matches);
+    });
+  });
+});
+</script>
