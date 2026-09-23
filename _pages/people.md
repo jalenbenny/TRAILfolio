@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: people
-description: Members of the Tootooni Lab (Health Informatics & Data Science, Loyola University Chicago)
+description: Members of the TRAIL Lab (Health Informatics & Data Science, Loyola University Chicago)
 nav: true
 nav_order: 3
 
@@ -43,34 +43,27 @@ profiles:
       <p><strong>Ubeyd Dincer</strong></p>
       <p>Graduate Research Assistant</p>
   - align: left
-    image: team/pharel.jpg
-    content: team/pharel.md
-    image_circular: false
-    more_info: >
-      <p><strong>Pharel Adjeyi</strong></p>
-      <p>Research Assistant</p>
-  - align: right
     image: team/adnan.jpg
     content: team/adnan.md
     image_circular: false
     more_info: >
       <p><strong>Adnan Hussain</strong></p>
       <p>Graduate Research Assistant</p>
-  - align: left
+  - align: right
     image: team/michael.jpg
     content: team/michael.md
     image_circular: false
     more_info: >
       <p><strong>Michael Saban</strong></p>
       <p>Graduate Research Assistant</p>
-  - align: right
+  - align: left
     image: team/dhruvin.jpg
     content: team/dhruvin.md
     image_circular: false
     more_info: >
       <p><strong>Dhruvin Patel</strong></p>
       <p>Graduate Research Assistant</p>
-  - align: left
+  - align: right
     image: team/rahil.jpg
     content: team/rahil.md
     image_circular: false

@@ -1,12 +1,12 @@
 # Add each lab member's real GitHub username to the `github:` field below to
-# populate their repository/contribution card. Leave blank until you have it —
+# populate their repository/contribution card. Leave blank until you have it,
 # the page will show a placeholder instead of erroring.
 repo_description_lines_max: 2
 
 lab_members:
   - name: Samie Tootooni
     role: Principal Investigator
-    github:
+    github: samie3000
     tags: [stroke, nlp, llm, vancomycin, hypertension, parkinsons, aki]
   - name: Behnaz Eslami
     role: Research Assistant
@@ -14,7 +14,7 @@ lab_members:
     tags: [nlp, llm, clinical-nlp]
   - name: Dhruvin Patel
     role: Research Assistant
-    github:
+    github: SoloDev
     tags: [vancomycin, pharmacokinetics, parkinsons, aki]
   - name: Maryum
     role: Research Assistant
@@ -22,19 +22,15 @@ lab_members:
     tags: [hypertension]
   - name: Ale
     role: Research Assistant
-    github:
+    github: ale3665
     tags: [llm, ai-evaluation]
   - name: Adnan
     role: Research Assistant
-    github:
+    github: ahossai6
     tags: [general]
   - name: Michael
     role: Research Assistant
-    github:
-    tags: [general]
-  - name: Pharel
-    role: Research Assistant
-    github:
+    github: msabanluc
     tags: [general]
   - name: Rahil
     role: Research Assistant
