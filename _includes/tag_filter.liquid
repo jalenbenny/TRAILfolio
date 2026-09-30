@@ -1,8 +1,11 @@
 {% comment %}
-  Renders a row of tag-filter pill buttons plus a "all" button, and the
+  Renders a row of tag-filter pill buttons plus an "all" button, and the
   client-side JS that shows/hides sibling cards based on which pill is
   active. Works together with the search boxes on projects.md and
   repositories.md, which toggle the same "tag-filter-hidden" class.
+
+  Styled with plain CSS here rather than framework button classes, since
+  this theme does not actually load Bootstrap.
 
   Params:
     container_id - string, must match the data-filter-group value used on
@@ -10,15 +13,43 @@
     tags         - array of tag strings to render as pills
 {% endcomment %}
 <div class="tag-filter mb-3" id="{{ include.container_id }}-filter" data-filter-group-controls="{{ include.container_id }}">
-  <button type="button" class="btn btn-sm btn-primary tag-filter-btn active" data-tag="all">all</button>
+  <button type="button" class="tag-filter-btn active" data-tag="all">all</button>
   {% for tag in include.tags %}
-  <button type="button" class="btn btn-sm btn-outline-secondary tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+  <button type="button" class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
   {% endfor %}
 </div>
 
 <style>
   .tag-filter-hidden { display: none !important; }
-  .tag-filter .tag-filter-btn { margin: 0 0.25rem 0.5rem 0; }
+
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag-filter-btn {
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(127, 127, 127, 0.35);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .tag-filter-btn:hover {
+    background: rgba(127, 127, 127, 0.14);
+  }
+
+  .tag-filter-btn.active {
+    background: #4fa3c7;
+    border-color: #4fa3c7;
+    color: #0b0e12;
+    font-weight: 600;
+  }
 </style>
 
 <script>
@@ -30,12 +61,8 @@
   var buttons = container.querySelectorAll(".tag-filter-btn");
   buttons.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      buttons.forEach(function (b) {
-        b.classList.remove("active", "btn-primary");
-        b.classList.add("btn-outline-secondary");
-      });
-      btn.classList.add("active", "btn-primary");
-      btn.classList.remove("btn-outline-secondary");
+      buttons.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
 
       var tag = btn.getAttribute("data-tag");
       document.querySelectorAll('[data-filter-group="' + filterId + '"]').forEach(function (item) {

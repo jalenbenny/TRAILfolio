@@ -8,8 +8,31 @@ nav_order: 7
 ---
 
 <div class="mb-3">
-  <input type="text" id="repo-search" class="form-control" placeholder="Search lab members by name, role, or tag...">
+  <input type="text" id="repo-search" class="site-search-input" placeholder="Search lab members by name, role, or tag...">
 </div>
+
+<style>
+  .site-search-input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(127, 127, 127, 0.35);
+    background: rgba(127, 127, 127, 0.06);
+    color: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .site-search-input::placeholder {
+    color: rgba(127, 127, 127, 0.85);
+    font-size: 0.85rem;
+  }
+  .site-search-input:focus {
+    border-color: #4fa3c7;
+    background: rgba(127, 127, 127, 0.1);
+  }
+</style>
 
 {% assign all_tags = site.data.repositories.lab_members | map: "tags" | flatten | uniq | sort %}
 {% include tag_filter.liquid container_id="repo-members" tags=all_tags %}
