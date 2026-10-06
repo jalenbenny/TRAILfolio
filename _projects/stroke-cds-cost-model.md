@@ -33,4 +33,6 @@ Models the downstream cost and outcome consequences of correct versus incorrect 
 
 Model inputs are derived from published literature and licensed datasets. Tables and code are in the repository.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

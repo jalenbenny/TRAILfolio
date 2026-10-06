@@ -35,4 +35,6 @@ Combines SparkNLP, SentenceBERT embeddings, zero-shot LLMs (LLaMA3-8B and Mistra
 
 MIMIC-III dataset.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

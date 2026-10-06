@@ -32,4 +32,6 @@ Combines models including BioBERT and BiLSTM-CNN-Char to detect and classify cli
 
 MIMIC-III dataset.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

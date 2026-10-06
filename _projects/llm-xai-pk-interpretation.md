@@ -33,4 +33,6 @@ Wraps standard interpretability outputs, such as SHAP feature attributions and c
 
 Uses the same restricted clinical datasets as the underlying prediction models. The repository holds pipeline code and prompt templates.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

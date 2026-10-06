@@ -34,4 +34,6 @@ Applies the Vanco24 Bayesian engine to a large MIMIC-IV cohort to generate indiv
 
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

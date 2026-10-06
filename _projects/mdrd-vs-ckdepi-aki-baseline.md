@@ -32,4 +32,6 @@ In Loyola University Medical Center EHR data, a true pre-admission baseline seru
 
 Loyola University Medical Center EHR data are restricted under IRB and contain PHI, so they are not shared. The repository holds code and documentation.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

@@ -34,4 +34,6 @@ Retrospective EHR analysis linking patient addresses to the Area Deprivation Ind
 
 EHR data are restricted under IRB and contain PHI, so they are not shared. ADI values are publicly available through the Neighborhood Atlas.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

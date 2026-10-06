@@ -31,4 +31,6 @@ Uses OSRM to calculate drive time from block groups to hospitals of various stro
 
 Public data. The repository includes Illinois hospitals and stroke designations, and all code used in the analysis.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

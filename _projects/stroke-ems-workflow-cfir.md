@@ -33,4 +33,6 @@ related_publications: false
 
 Transcripts are not shared. The repository holds the interview guide, codebook, and analysis documentation.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

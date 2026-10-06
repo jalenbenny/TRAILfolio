@@ -31,4 +31,6 @@ Uses statistical methods to identify associations between clinical note topics a
 
 Therapeutic Inertia dataset.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

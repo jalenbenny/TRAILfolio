@@ -33,4 +33,6 @@ Surveys current and emerging uses of AI and machine learning for medication mana
 
 Narrative literature review with no primary data. The repository holds the reference list and summary tables.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

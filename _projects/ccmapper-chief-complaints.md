@@ -29,4 +29,6 @@ A zero-shot LLaMA-3.1-70B based framework that achieves high precision when mapp
 
 Indiana University chief complaints data.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

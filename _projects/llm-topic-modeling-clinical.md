@@ -29,4 +29,6 @@ Presents a scalable approach for identifying hidden thematic structures in clini
 
 Loyola data (Therapeutic Inertia dataset).
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

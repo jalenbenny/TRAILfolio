@@ -32,4 +32,6 @@ Applies computer vision to infrared pupillometry video to isolate the melanopsin
 
 Pupillometry video and derived reflex measurements are not shared because of participant privacy. The repository holds analysis code.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

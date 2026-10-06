@@ -35,4 +35,6 @@ Machine learning models trained on routinely collected structured prehospital EM
 
 Uses an EMS dataset with PHI. Code and config only.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

@@ -32,4 +32,6 @@ Uses linear mixed-effects regression models to evaluate whether greater access t
 
 SHIELD Illinois data.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

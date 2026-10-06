@@ -32,4 +32,6 @@ Applies NLP to free-text EMS run narratives to detect which assessment findings 
 
 Uses the same restricted EMS dataset. Narratives contain PHI and are never committed. The repository holds code, annotation, and aggregate results only.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

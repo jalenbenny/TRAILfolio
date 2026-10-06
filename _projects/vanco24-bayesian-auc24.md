@@ -34,4 +34,6 @@ Implements an a posteriori Bayesian estimation framework on the log scale, using
 
 Validation cohorts include PHI-restricted clinical data that are not shared. The repository holds the engine code and documentation.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

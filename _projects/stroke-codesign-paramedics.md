@@ -15,7 +15,7 @@ tags:
   - co-design
   - human-factors
 team: "A. Hossain, M. Saban, M. Cichon, S. Tootooni"
-repo: stroke-codesign-paramedics
+repo: Paramedic-Co-Design-and-Trust-Study
 contact: ahossain1@luc.edu
 related:
   - stroke-triage-ml
@@ -32,5 +32,7 @@ This study examines how paramedics perceive and evaluate a machine learning tool
 ## Data availability
 
 Data are not shared. The repository holds the interview guide, recruitment documentation, and codebook.
+
+{% include project_readme.liquid %}
 
 {% include project_related.liquid %}

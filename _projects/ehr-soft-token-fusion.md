@@ -33,4 +33,6 @@ Explores training a projector that encodes a structured patient record as a smal
 
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

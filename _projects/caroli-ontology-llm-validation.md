@@ -33,4 +33,6 @@ Uses an LLM to evaluate the medical content of the Caroli Disease and Syndrome O
 
 Uses the basic CaroliO OWL ontology and published PubMed literature. No patient-level data or protected health information.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

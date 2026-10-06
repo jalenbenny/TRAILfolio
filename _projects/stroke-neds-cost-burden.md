@@ -33,4 +33,6 @@ Uses the HCUP Nationwide Emergency Department Sample to estimate the financial b
 
 HCUP-NEDS is licensed and requires a data use agreement and training, so it cannot be redistributed or held here.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

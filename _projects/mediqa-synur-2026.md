@@ -33,4 +33,6 @@ The Lakefront AI Ramblers entry to the MEDIQA-SYNUR 2026 shared task, combining 
 
 Task data are distributed by the shared task organizers and not redistributed here. Code and config only.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

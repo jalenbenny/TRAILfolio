@@ -34,4 +34,6 @@ Develops a bi-objective location-allocation optimization framework for emergency
 
 SHIELD Illinois data.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

@@ -29,4 +29,6 @@ Shows that fine-tuning LLaMA-3 with LoRA on specialty-specific ICU physician not
 
 MIMIC-III dataset.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}

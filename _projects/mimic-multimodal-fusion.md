@@ -32,4 +32,6 @@ Benchmarks unimodal baselines against three fusion strategies on MIMIC-IV, combi
 
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
 
+{% include project_readme.liquid %}
+
 {% include project_related.liquid %}
