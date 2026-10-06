@@ -1,0 +1,11 @@
+# Collaborator list shown on the collaborators page.
+# Replace the placeholder entry with real collaborators, one block per person.
+# Fields: name, rank, institution, projects (list of project titles), involvement, url
+- name: "Placeholder Collaborator (replace me)"
+  rank: "Professor"
+  institution: "Partner Institution"
+  projects:
+    - "Example project title"
+  involvement: "Describe the role the TRAIL Lab plays, for example data analysis, model development, or co-authorship."
+  url: ""
+  placeholder: true

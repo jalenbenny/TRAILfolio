@@ -1,0 +1,17 @@
+# Research areas shown on the projects page, in display order.
+# The id must match the area field in each _projects file.
+- id: prehospital-stroke
+  title: "Prehospital Stroke Decision Support"
+  summary: "These projects build and evaluate AI tools that help paramedics recognize stroke and choose the right hospital before the patient arrives. The work covers the prediction models, the narrative text those models can learn from, interviews with paramedics about how a tool would fit their workflow, and cost analyses of what correct and incorrect routing means for patients and hospitals."
+- id: critical-care-dosing
+  title: "AI in Medication Dosing in Critical Care"
+  summary: "Dosing in the ICU has to account for changing kidney function, drug levels that are hard to measure directly, and a large amount of data in the record. These projects develop Bayesian pharmacokinetic engines, machine learning models trained on the labels those engines produce, and language model tools that explain model output to clinicians in plain words."
+- id: clinical-nlp
+  title: "Clinical NLP"
+  summary: "Much of what clinicians know about a patient sits in free text. These projects extract concepts and assertions from notes, map chief complaints to a structured taxonomy, find latent themes across large note collections, and test how well language models agree with expert-built ontologies."
+- id: health-systems-equity
+  title: "Health Systems, Equity & Access"
+  summary: "These projects look at how care is organized and who it reaches. They use area deprivation, drive times, and COVID-19 testing site data to study access to stroke centers, blood pressure control, and pandemic response, and they use optimization to place resources where they are needed most."
+- id: emerging-ai
+  title: "Other Emerging AI Applications"
+  summary: "Work that applies newer AI methods beyond the lab's main clinical streams. It includes computer vision on pupillometry video to detect Parkinson's disease, done with Dr. Gaynes, and methods that combine structured records with language models."

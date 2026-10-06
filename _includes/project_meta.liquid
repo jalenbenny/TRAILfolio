@@ -1,0 +1,17 @@
+{% assign area_obj = site.data.research_areas | where: "id", page.area | first %}
+<div class="proj-meta">
+  <p>
+    {% if area_obj %}<span class="proj-chip proj-chip-area"><a href="{{ '/projects/' | relative_url }}#{{ area_obj.id }}">{{ area_obj.title }}</a></span>{% endif %}
+    {% if page.status %}<span class="proj-chip">{{ page.status }}</span>{% endif %}
+  </p>
+  {% if page.team %}<p><strong>Team:</strong> {{ page.team }}</p>{% endif %}
+  {% if page.repo and site.lab_github_org and site.lab_github_org != "" %}
+  <p><strong>Repository:</strong> <a href="https://github.com/{{ site.lab_github_org }}/{{ page.repo }}">github.com/{{ site.lab_github_org }}/{{ page.repo }}</a></p>
+  {% endif %}
+  {% if page.contact %}<p><strong>Contact:</strong> <a href="mailto:{{ page.contact }}">{{ page.contact }}</a></p>{% endif %}
+</div>
+<style>
+  .proj-chip { display: inline-block; font-size: 0.78rem; padding: 0.25rem 0.7rem; margin-right: 0.4rem; border-radius: 999px; border: 1px solid rgba(127,127,127,0.35); }
+  .proj-chip-area { border-color: #4fa3c7; }
+  .proj-chip a { text-decoration: none; }
+</style>

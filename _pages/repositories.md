@@ -4,7 +4,7 @@ permalink: /repositories/
 title: repositories
 description: GitHub activity for lab members. Add each person's real GitHub username in _data/repositories.yml to populate their card.
 nav: true
-nav_order: 7
+nav_order: 8
 ---
 
 <div class="mb-3">
@@ -12,6 +12,7 @@ nav_order: 7
 </div>
 
 <style>
+  .search-hidden { display: none !important; }
   .site-search-input {
     width: 100%;
     font-size: 0.9rem;
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-filter-group="repo-members"]').forEach(function (item) {
       var text = item.textContent.toLowerCase();
       var matches = text.indexOf(query) !== -1;
-      item.classList.toggle('tag-filter-hidden', !matches);
+      item.classList.toggle('search-hidden', !matches);
     });
   });
 });
