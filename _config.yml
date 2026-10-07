@@ -717,3 +717,5 @@ future: true
 # GitHub account or org that hosts one repository per project.
 # Fill this in to show repository links on each project page.
 lab_github_org: TootooniLab
+# Set to true only if the project repos are public. Keeps repo links off the site while they are private.
+repos_public: false

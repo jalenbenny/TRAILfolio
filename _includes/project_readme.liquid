@@ -1,43 +1,14 @@
-{% if page.repo and site.lab_github_org and site.lab_github_org != "" %}
-<h2>Repository README</h2>
-<div id="repo-readme" class="repo-readme" data-org="{{ site.lab_github_org }}" data-repo="{{ page.repo }}">
-  <p class="repo-readme-note">Loading README from GitHub...</p>
+{% assign readme_text = site.data.readmes[page.pid] %}
+{% if readme_text and readme_text != "" %}
+<h2>Project README</h2>
+<div class="repo-readme">
+  {{ readme_text | markdownify }}
 </div>
-<p class="repo-readme-foot"><a href="https://github.com/{{ site.lab_github_org }}/{{ page.repo }}">View the full repository on GitHub</a></p>
 <style>
   .repo-readme { padding: 1rem 1.2rem; border: 1px solid rgba(127,127,127,0.3); border-radius: 12px; overflow-x: auto; }
   .repo-readme img { max-width: 100%; }
   .repo-readme pre { padding: 0.8rem; border-radius: 8px; background: rgba(127,127,127,0.12); overflow-x: auto; }
   .repo-readme table { border-collapse: collapse; }
   .repo-readme th, .repo-readme td { border: 1px solid rgba(127,127,127,0.3); padding: 0.3rem 0.6rem; }
-  .repo-readme-note, .repo-readme-foot { font-size: 0.85rem; opacity: 0.8; }
 </style>
-<script>
-(function () {
-  var box = document.getElementById('repo-readme');
-  if (!box) return;
-  var org = box.getAttribute('data-org'), repo = box.getAttribute('data-repo');
-  var base = 'https://github.com/' + org + '/' + repo;
-  fetch('https://api.github.com/repos/' + org + '/' + repo + '/readme', {
-    headers: { 'Accept': 'application/vnd.github.html+json' }
-  }).then(function (r) {
-    if (!r.ok) throw new Error(r.status);
-    return r.text();
-  }).then(function (html) {
-    box.innerHTML = html;
-    box.querySelectorAll('a.anchor').forEach(function (a) { a.remove(); });
-    box.querySelectorAll('a[href]').forEach(function (a) {
-      var h = a.getAttribute('href');
-      if (h.charAt(0) === '#') return;
-      if (!/^https?:|^mailto:/.test(h)) a.setAttribute('href', base + '/blob/HEAD/' + h);
-    });
-    box.querySelectorAll('img[src]').forEach(function (img) {
-      var s = img.getAttribute('src');
-      if (!/^https?:|^data:/.test(s)) img.setAttribute('src', 'https://raw.githubusercontent.com/' + org + '/' + repo + '/HEAD/' + s);
-    });
-  }).catch(function () {
-    box.innerHTML = '<p class="repo-readme-note">The README could not be loaded here. Use the link below to open the repository.</p>';
-  });
-})();
-</script>
 {% endif %}
