@@ -38,16 +38,59 @@ def clean(md):
             break
     return "\n".join(lines).strip() + "\n"
 
-def via_git(repo):
+IMG_EXT = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp")
+MAX_IMG = 5 * 1024 * 1024
+IMG_DIR = "assets/img/readmes"
+
+def is_remote(u):
+    return re.match(r"^(https?:|data:|mailto:|#|//)", u) is not None
+
+def localize(md, pid, root, readme_dir):
+    """Copy images the README points to into the site and rewrite their paths.
+    Relative links to other repo files are turned into plain text (they would 404)."""
+    from urllib.parse import quote, unquote
+    copied = []
+    def grab(ref):
+        ref = unquote(ref.split("#")[0].split("?")[0]).strip()
+        if not ref or is_remote(ref) or not ref.lower().endswith(IMG_EXT):
+            return None
+        src = os.path.normpath(os.path.join(readme_dir, ref.lstrip("/")) if not ref.startswith("/") else os.path.join(root, ref.lstrip("/")))
+        if not src.startswith(os.path.normpath(root)) or not os.path.isfile(src):
+            print("   missing image: %s" % ref); return None
+        if os.path.getsize(src) > MAX_IMG:
+            print("   image too large, skipped: %s" % ref); return None
+        rel = os.path.relpath(src, root).replace(os.sep, "/")
+        dest = os.path.join(IMG_DIR, pid, rel)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        shutil.copyfile(src, dest)
+        copied.append(rel)
+        return "/" + IMG_DIR + "/" + pid + "/" + quote(rel)
+    def md_img(m):
+        new = grab(m.group(2))
+        return m.group(0) if new is None else "![%s](%s)" % (m.group(1), new)
+    md = re.sub(r"!\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)", md_img, md)
+    def html_img(m):
+        new = grab(m.group(2))
+        return m.group(0) if new is None else m.group(1) + new + m.group(3)
+    md = re.sub(r"(<img\b[^>]*?\bsrc=[\"'])([^\"']+)([\"'])", html_img, md, flags=re.I)
+    md = re.sub(r"(?<!!)\[([^\]]+)\]\((?!https?:|mailto:|#|/%s/)([^)]+)\)" % IMG_DIR, r"\1", md)
+    return md, copied
+
+def via_git(repo, pid):
     tmp = tempfile.mkdtemp()
     try:
         r = subprocess.run(["git", "clone", "--depth", "1", "-q", "%s/%s.git" % (BASE, repo), tmp + "/r"],
                            capture_output=True, text=True, env=dict(os.environ, GIT_TERMINAL_PROMPT="0"))
         if r.returncode != 0:
             raise RuntimeError(r.stderr.strip().splitlines()[-1] if r.stderr.strip() else "clone failed")
-        for name in sorted(os.listdir(tmp + "/r")):
+        root = tmp + "/r"
+        for name in sorted(os.listdir(root)):
             if name.lower() in ("readme.md", "readme.markdown", "readme.txt", "readme"):
-                return open(os.path.join(tmp, "r", name), encoding="utf-8", errors="replace").read()
+                text = open(os.path.join(root, name), encoding="utf-8", errors="replace").read()
+                text, copied = localize(text, pid, root, root)
+                if copied:
+                    print("   copied %d image(s)" % len(copied))
+                return text
         raise RuntimeError("no README in repo")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -74,7 +117,7 @@ for path in sorted(glob.glob("_projects/*.md")):
     if not pid or not repo:
         continue
     try:
-        data[pid] = clean(via_git(repo) if LOCAL else via_api(repo))
+        data[pid] = clean(via_git(repo, pid) if LOCAL else via_api(repo))
         ok += 1
         print("ok      %s" % repo)
     except Exception as e:

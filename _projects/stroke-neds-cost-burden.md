@@ -15,7 +15,7 @@ tags:
   - health-economics
   - cost
 team: "U. Dincer, M. Saban, A. Kasaie, A. Hossain, D. Heiferman, T. Markossian, S. Tootooni"
-repo: stroke-neds-cost-burden
+repo: stroke-mistriage-analysis
 contact: udincer@luc.edu
 related:
   - stroke-cds-cost-model

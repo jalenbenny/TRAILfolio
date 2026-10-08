@@ -14,6 +14,7 @@ tags:
   - topic-selection
   - hypertension
 team: "M. Ahmad, B. Eslami, S. Tootooni"
+repo: therapeutic-inertia-NLP
 contact: mahmad12@luc.edu
 related:
   - llm-topic-modeling-clinical

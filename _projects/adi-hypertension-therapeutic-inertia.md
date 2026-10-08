@@ -15,7 +15,7 @@ tags:
   - ehr
   - therapeutic-inertia
 team: "M. Saban, S. Tootooni, T. Markossian, A. Wozniak, G. Hiura, B. Probst, K. Habicht, H. Kramer"
-repo: adi-hypertension-therapeutic-inertia
+repo: Area-Deprivation-Index-and-Blood-Pressure-Control
 contact: msaban@luc.edu
 related:
   - maryum-hypertension

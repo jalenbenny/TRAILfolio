@@ -16,7 +16,7 @@ tags:
   - fusion
   - nlp
 team: "M. Saban, W. Yoon, T. Miller, S. Tootooni, D. Dligach"
-repo: ehr-soft-token-fusion
+repo: ehr-soft-token-projection
 contact: msaban@luc.edu
 related:
   - mimic-multimodal-fusion

@@ -15,7 +15,7 @@ tags:
   - drug-dosing
   - review
 team: "N. Azarvash, D. A. Patel, D. Quickfall, H. R. Hambrick, K. B. Kashani, S. Tootooni"
-repo: ai-medication-management-critical-care
+repo: AI-Based-Dosing-In-ICU
 contact: dpatel96@luc.edu
 related:
   - vanco24-bayesian-auc24

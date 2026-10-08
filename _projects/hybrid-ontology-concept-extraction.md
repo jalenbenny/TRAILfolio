@@ -15,6 +15,7 @@ tags:
   - snomed-ct
   - named-entity-recognition
 team: "B. Eslami, D. Dligach, N. Azarvash, P. de la Pena, B. Strickland, S. Tootooni"
+repo: concept-extraction
 contact: beslami@luc.edu
 related:
   - assertion-detection-voting

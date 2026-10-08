@@ -15,7 +15,7 @@ tags:
   - nlp
   - mimic-iv
 team: "M. Saban, W. Yoon, T. Miller, S. Tootooni, D. Dligach"
-repo: mimic-multimodal-fusion
+repo: ehr-multimodal-fusion
 contact: msaban@luc.edu
 related:
   - ehr-soft-token-fusion
