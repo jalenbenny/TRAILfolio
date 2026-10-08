@@ -10,7 +10,7 @@ lab_members:
     tags: [stroke, nlp, llm, vancomycin, hypertension, parkinsons, aki]
   - name: Behnaz Eslami
     role: Research Assistant
-    github:
+    github: behnazeslami
     tags: [nlp, llm, clinical-nlp]
   - name: Dhruvin Patel
     role: Research Assistant
