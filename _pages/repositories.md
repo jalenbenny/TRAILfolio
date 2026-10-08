@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: GitHub activity for lab members. Add each person's real GitHub username in _data/repositories.yml to populate their card.
+description: GitHub activity for lab members. 
 nav: true
 nav_order: 8
 ---
