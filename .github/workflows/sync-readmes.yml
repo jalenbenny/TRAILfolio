@@ -23,13 +23,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- _data/readmes.json; then
+          if git diff --quiet -- _data/readmes.yml; then
             echo "No README changes."
             exit 0
           fi
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add _data/readmes.json
+          git add _data/readmes.yml
           git commit -m "sync project READMEs from TootooniLab"
           git push
           gh workflow run deploy.yml --ref "${GITHUB_REF_NAME}"
