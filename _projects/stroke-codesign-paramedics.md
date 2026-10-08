@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 This study examines how paramedics perceive and evaluate a machine learning tool designed to support stroke triage decisions in the field, through one-on-one interviews of 45 to 60 minutes.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Data are not shared. The repository holds the interview guide, recruitment documentation, and codebook.
+
+</div>
 
 {% include project_readme.liquid %}
 

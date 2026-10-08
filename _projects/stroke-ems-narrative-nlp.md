@@ -24,13 +24,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Applies NLP to free-text EMS run narratives to detect which assessment findings were actually collected and recorded on scene or in the ambulance. The extracted narrative content is intended to supplement the structured EMS fields used by the triage models, giving a text and tabular view of the same encounter.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Uses the same restricted EMS dataset. Narratives contain PHI and are never committed. The repository holds code, annotation, and aggregate results only.
+
+</div>
 
 {% include project_readme.liquid %}
 

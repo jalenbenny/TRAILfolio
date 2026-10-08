@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Uses linear mixed-effects regression models to evaluate whether greater access to SHIELD Illinois saliva-based COVID-19 testing centers was associated with lower ICU admission rates, particularly in socioeconomically disadvantaged communities.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 SHIELD Illinois data.
+
+</div>
 
 {% include project_readme.liquid %}
 

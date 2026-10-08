@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 25 semi-structured interviews with 20 EMS participants in Illinois Chicagoland EMS regions, coded against the Consolidated Framework for Implementation Research.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Transcripts are not shared. The repository holds the interview guide, codebook, and analysis documentation.
+
+</div>
 
 {% include project_readme.liquid %}
 

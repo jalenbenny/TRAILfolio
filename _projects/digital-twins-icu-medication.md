@@ -21,13 +21,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Shows that fine-tuning LLaMA-3 with LoRA on specialty-specific ICU physician notes from the medical ICU produces more accurate digital twin treatment recommendations than models trained on other specialties.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 MIMIC-III dataset.
+
+</div>
 
 {% include project_readme.liquid %}
 

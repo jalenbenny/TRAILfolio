@@ -28,13 +28,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Combines SparkNLP, SentenceBERT embeddings, zero-shot LLMs (LLaMA3-8B and Mistral-7B), and UMLS/SNOMED CT normalization for clinical concept extraction.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 MIMIC-III dataset.
+
+</div>
 
 {% include project_readme.liquid %}
 

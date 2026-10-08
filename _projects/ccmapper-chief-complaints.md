@@ -22,13 +22,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 A zero-shot LLaMA-3.1-70B based framework that achieves high precision when mapping free-text emergency department chief complaints to a structured multi-label clinical taxonomy.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Indiana University chief complaints data.
+
+</div>
 
 {% include project_readme.liquid %}
 

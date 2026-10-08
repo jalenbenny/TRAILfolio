@@ -24,13 +24,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Combines models including BioBERT and BiLSTM-CNN-Char to detect and classify clinical assertions, such as polarity and subject, in clinical text.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 MIMIC-III dataset.
+
+</div>
 
 {% include project_readme.liquid %}
 

@@ -26,13 +26,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Develops a bi-objective location-allocation optimization framework for emergency healthcare resource planning that balances efficiency and equity. The model combines service coverage with a Rawlsian equity objective and incorporates the Area Deprivation Index (ADI) into both the objective function and explicit equity and equality constraints. Using SHIELD Illinois COVID-19 testing data, the framework simulates how different policy priorities affect testing-site locations, resource allocation, access disparities, and overall system performance.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 SHIELD Illinois data.
+
+</div>
 
 {% include project_readme.liquid %}
 

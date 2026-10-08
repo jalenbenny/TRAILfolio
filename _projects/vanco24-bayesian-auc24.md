@@ -26,13 +26,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Implements an a posteriori Bayesian estimation framework on the log scale, using published population priors, to calculate individualized two-compartment vancomycin AUC24.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Validation cohorts include PHI-restricted clinical data that are not shared. The repository holds the engine code and documentation.
+
+</div>
 
 {% include project_readme.liquid %}
 

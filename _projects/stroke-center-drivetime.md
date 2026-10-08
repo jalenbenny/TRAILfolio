@@ -23,13 +23,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Uses OSRM to calculate drive time from block groups to hospitals of various stroke center certifications, replacing a Euclidean distance approach.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Public data. The repository includes Illinois hospitals and stroke designations, and all code used in the analysis.
+
+</div>
 
 {% include project_readme.liquid %}
 

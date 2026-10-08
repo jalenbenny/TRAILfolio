@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Models the downstream cost and outcome consequences of correct versus incorrect prehospital stroke routing under an AI decision support tool. Parameters are drawn from the literature.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Model inputs are derived from published literature and licensed datasets. Tables and code are in the repository.
+
+</div>
 
 {% include project_readme.liquid %}
 

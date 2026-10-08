@@ -24,13 +24,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Applies computer vision to infrared pupillometry video to isolate the melanopsin-dependent post-illumination pupillary light reflex (PIPR), a retinal biomarker linked to intrinsically photosensitive retinal ganglion cells.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Pupillometry video and derived reflex measurements are not shared because of participant privacy. The repository holds analysis code.
+
+</div>
 
 {% include project_readme.liquid %}
 

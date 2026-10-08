@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Uses the HCUP Nationwide Emergency Department Sample to estimate the financial burden associated with stroke patients presenting to non-specialized hospitals.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 HCUP-NEDS is licensed and requires a data use agreement and training, so it cannot be redistributed or held here.
+
+</div>
 
 {% include project_readme.liquid %}
 

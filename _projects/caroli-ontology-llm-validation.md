@@ -26,13 +26,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Uses an LLM to evaluate the medical content of the Caroli Disease and Syndrome Ontology (CaroliO), checking explicit ontology axioms and class relationships against PubMed literature.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Uses the basic CaroliO OWL ontology and published PubMed literature. No patient-level data or protected health information.
+
+</div>
 
 {% include project_readme.liquid %}
 

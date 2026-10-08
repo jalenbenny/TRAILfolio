@@ -1,15 +1,10 @@
 {% assign readme_text = site.data.readmes[page.pid] %}
 {% if readme_text and readme_text != "" %}
-<h2>Project README</h2>
 {% capture img_prefix %}src="{{ '/assets/img/readmes/' | relative_url }}{% endcapture %}
-<div class="repo-readme">
-  {{ readme_text | markdownify | replace: 'src="/assets/img/readmes/', img_prefix }}
-</div>
-<style>
-  .repo-readme { padding: 1rem 1.2rem; border: 1px solid rgba(127,127,127,0.3); border-radius: 12px; overflow-x: auto; }
-  .repo-readme img { max-width: 100%; height: auto; }
-  .repo-readme pre { padding: 0.8rem; border-radius: 8px; background: rgba(127,127,127,0.12); overflow-x: auto; }
-  .repo-readme table { border-collapse: collapse; }
-  .repo-readme th, .repo-readme td { border: 1px solid rgba(127,127,127,0.3); padding: 0.3rem 0.6rem; }
-</style>
+<section class="proj-readme">
+  <div class="proj-readme-bar"><strong>Project README</strong><span>From the lab's project repository</span></div>
+  <div class="repo-readme">
+    {{ readme_text | markdownify | replace: 'src="/assets/img/readmes/', img_prefix }}
+  </div>
+</section>
 {% endif %}

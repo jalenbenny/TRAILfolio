@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Surveys current and emerging uses of AI and machine learning for medication management and dosing in critical care, including model types, clinical use cases, and implementation barriers.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Narrative literature review with no primary data. The repository holds the reference list and summary tables.
+
+</div>
 
 {% include project_readme.liquid %}
 

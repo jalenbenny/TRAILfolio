@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 The Lakefront AI Ramblers entry to the MEDIQA-SYNUR 2026 shared task, combining lexical and dense retrieval with an LLM verification stage on an open-source model.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Task data are distributed by the shared task organizers and not redistributed here. Code and config only.
+
+</div>
 
 {% include project_readme.liquid %}
 

@@ -21,13 +21,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Presents a scalable approach for identifying hidden thematic structures in clinical text using LLM-based topic modeling and concept clustering.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Loyola data (Therapeutic Inertia dataset).
+
+</div>
 
 {% include project_readme.liquid %}
 

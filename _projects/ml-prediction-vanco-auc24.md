@@ -26,13 +26,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Applies the Vanco24 Bayesian engine to a large MIMIC-IV cohort to generate individualized AUC24 labels, then trains XGBoost and comparison models to predict future AUC.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
+
+</div>
 
 {% include project_readme.liquid %}
 

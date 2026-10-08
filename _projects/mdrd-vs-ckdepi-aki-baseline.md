@@ -24,13 +24,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 In Loyola University Medical Center EHR data, a true pre-admission baseline serum creatinine is missing for many patients, so back-estimation methods are commonly substituted. This analysis stages AKI under both methods for comparison.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Loyola University Medical Center EHR data are restricted under IRB and contain PHI, so they are not shared. The repository holds code and documentation.
+
+</div>
 
 {% include project_readme.liquid %}
 

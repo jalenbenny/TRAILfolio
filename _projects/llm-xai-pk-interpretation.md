@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Wraps standard interpretability outputs, such as SHAP feature attributions and counterfactuals, with an LLM layer that converts them into clear, clinician-facing plain-language explanations.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Uses the same restricted clinical datasets as the underlying prediction models. The repository holds pipeline code and prompt templates.
+
+</div>
 
 {% include project_readme.liquid %}
 

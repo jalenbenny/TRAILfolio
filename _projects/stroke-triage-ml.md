@@ -27,13 +27,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Machine learning models trained on routinely collected structured prehospital EMS records to predict stroke and severe stroke before hospital arrival.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Uses an EMS dataset with PHI. Code and config only.
+
+</div>
 
 {% include project_readme.liquid %}
 

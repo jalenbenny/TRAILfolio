@@ -1,9 +1,11 @@
 {% if page.related and page.related.size > 0 %}
+<div class="proj-block">
 <h2>Connects to</h2>
-<ul>
+<ul class="proj-related">
 {% for rid in page.related %}
   {% assign rp = site.projects | where: "pid", rid | first %}
   {% if rp %}<li><a href="{{ rp.url | relative_url }}">{{ rp.short_title | default: rp.title }}</a></li>{% endif %}
 {% endfor %}
 </ul>
+</div>
 {% endif %}

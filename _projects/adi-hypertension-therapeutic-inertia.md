@@ -26,13 +26,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Retrospective EHR analysis linking patient addresses to the Area Deprivation Index to test whether neighborhood disadvantage predicts uncontrolled hypertension and therapeutic inertia.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 EHR data are restricted under IRB and contain PHI, so they are not shared. ADI values are publicly available through the Neighborhood Atlas.
+
+</div>
 
 {% include project_readme.liquid %}
 

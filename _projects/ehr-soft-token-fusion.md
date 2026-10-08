@@ -25,13 +25,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Explores training a projector that encodes a structured patient record as a small set of soft tokens ingestible by an LLM, supervised with next-token loss over serialized records.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
+
+</div>
 
 {% include project_readme.liquid %}
 

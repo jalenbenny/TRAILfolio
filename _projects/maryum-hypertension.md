@@ -24,13 +24,21 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+<div class="proj-block" markdown="1">
+
 ## Summary
 
 Uses statistical methods to identify associations between clinical note topics and therapeutic inertia in hypertension care.
 
+</div>
+
+<div class="proj-block" markdown="1">
+
 ## Data availability
 
 Therapeutic Inertia dataset.
+
+</div>
 
 {% include project_readme.liquid %}
 
