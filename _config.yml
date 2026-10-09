@@ -345,8 +345,8 @@ display_categories: []
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Tootooni, Eslami, Saban]
+  first_name: [Samie, S., M. Samie, M. S., Behnaz, B., Michael, M.]
 
   style: apa
   locale: en
