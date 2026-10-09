@@ -20,23 +20,23 @@ lab_members:
     role: Research Assistant
     github: jalenbenny
     tags: [web-design, software-engineering]
-  - name: Ale
+  - name: Ale Vellucci Solari
     role: Research Assistant
     github: ale3665
     tags: [llm, ai-evaluation]
-  - name: Adnan
+  - name: Adnan Hossain
     role: Research Assistant
     github: ahossai6
     tags: [general]
-  - name: Michael
+  - name: Michael Saban
     role: Research Assistant
     github: msabanluc
     tags: [general]
-  - name: Rahil
+  - name: Rahil Sadruddin
     role: Research Assistant
     github: Rahil864
     tags: [general]
-  - name: Ubeyd
+  - name: Ubeyd Dincer
     role: Research Assistant
     github: ubeydincer
     tags: [general]
