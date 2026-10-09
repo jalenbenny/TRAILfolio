@@ -13,7 +13,7 @@ profiles:
     image_circular: false
     more_info: >
       <p><strong>Samie Tootooni</strong></p>
-      <p>Lab Leader</p>
+      <p>Principal Investigator</p>
   - align: left
     image: team/behnaz.jpg
     content: team/behnaz.md
