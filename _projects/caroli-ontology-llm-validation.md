@@ -26,6 +26,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -41,6 +44,8 @@ Uses an LLM to evaluate the medical content of the Caroli Disease and Syndrome O
 Uses the basic CaroliO OWL ontology and published PubMed literature. No patient-level data or protected health information.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

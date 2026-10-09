@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ The Lakefront AI Ramblers entry to the MEDIQA-SYNUR 2026 shared task, combining 
 Task data are distributed by the shared task organizers and not redistributed here. Code and config only.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

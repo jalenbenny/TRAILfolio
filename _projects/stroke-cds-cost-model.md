@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ Models the downstream cost and outcome consequences of correct versus incorrect 
 Model inputs are derived from published literature and licensed datasets. Tables and code are in the repository.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

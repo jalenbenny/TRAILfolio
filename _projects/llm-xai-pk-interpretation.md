@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ Wraps standard interpretability outputs, such as SHAP feature attributions and c
 Uses the same restricted clinical datasets as the underlying prediction models. The repository holds pipeline code and prompt templates.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

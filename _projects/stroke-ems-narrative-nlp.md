@@ -24,6 +24,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -39,6 +42,8 @@ Applies NLP to free-text EMS run narratives to detect which assessment findings 
 Uses the same restricted EMS dataset. Narratives contain PHI and are never committed. The repository holds code, annotation, and aggregate results only.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

@@ -16,10 +16,10 @@ lab_members:
     role: Research Assistant
     github: DhruvinP99
     tags: [vancomycin, pharmacokinetics, parkinsons, aki]
-  - name: Maryum
+  - name: Ben Flowers
     role: Research Assistant
-    github:
-    tags: [hypertension]
+    github: jalenbenny
+    tags: [web-design, software-engineering]
   - name: Ale
     role: Research Assistant
     github: ale3665

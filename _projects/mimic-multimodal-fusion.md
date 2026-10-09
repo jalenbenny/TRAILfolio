@@ -24,6 +24,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -39,6 +42,8 @@ Benchmarks unimodal baselines against three fusion strategies on MIMIC-IV, combi
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

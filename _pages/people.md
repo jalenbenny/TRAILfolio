@@ -70,4 +70,11 @@ profiles:
     more_info: >
       <p><strong>Rahil Sadruddin</strong></p>
       <p>Research Assistant</p>
+  - align: left
+    image: team/ben.jpg
+    content: team/ben.md
+    image_circular: false
+    more_info: >
+      <p><strong>Ben Flowers</strong></p>
+      <p>Research Assistant</p>
 ---

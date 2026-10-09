@@ -26,6 +26,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -41,6 +44,8 @@ Retrospective EHR analysis linking patient addresses to the Area Deprivation Ind
 EHR data are restricted under IRB and contain PHI, so they are not shared. ADI values are publicly available through the Neighborhood Atlas.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

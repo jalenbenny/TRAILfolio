@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ Uses the HCUP Nationwide Emergency Department Sample to estimate the financial b
 HCUP-NEDS is licensed and requires a data use agreement and training, so it cannot be redistributed or held here.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ Uses linear mixed-effects regression models to evaluate whether greater access t
 SHIELD Illinois data.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

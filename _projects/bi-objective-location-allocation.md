@@ -26,6 +26,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -41,6 +44,8 @@ Develops a bi-objective location-allocation optimization framework for emergency
 SHIELD Illinois data.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

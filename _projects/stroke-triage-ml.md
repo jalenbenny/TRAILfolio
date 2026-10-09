@@ -27,6 +27,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -42,6 +45,8 @@ Machine learning models trained on routinely collected structured prehospital EM
 Uses an EMS dataset with PHI. Code and config only.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

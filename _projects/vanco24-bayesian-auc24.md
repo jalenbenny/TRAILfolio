@@ -26,6 +26,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -41,6 +44,8 @@ Implements an a posteriori Bayesian estimation framework on the log scale, using
 Validation cohorts include PHI-restricted clinical data that are not shared. The repository holds the engine code and documentation.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

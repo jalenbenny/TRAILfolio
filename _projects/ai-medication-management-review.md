@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ Surveys current and emerging uses of AI and machine learning for medication mana
 Narrative literature review with no primary data. The repository holds the reference list and summary tables.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

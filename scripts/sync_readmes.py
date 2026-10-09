@@ -36,7 +36,19 @@ def clean(md):
         if l.startswith("# "):
             del lines[i]
             break
-    return "\n".join(lines).strip() + "\n"
+    # The project page already shows the one-line description, status, tags and team,
+    # so drop the README's intro lines (everything before the first "## " heading)
+    first = next((i for i, l in enumerate(lines) if l.startswith("## ")), None)
+    if first is not None:
+        lines = lines[first:]
+    # drop a "## Team" section (the info panel on the page already lists the team)
+    out, skip = [], False
+    for l in lines:
+        if l.startswith("## "):
+            skip = l[3:].strip().lower() == "team"
+        if not skip:
+            out.append(l)
+    return "\n".join(out).strip() + "\n"
 
 IMG_EXT = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp")
 MAX_IMG = 5 * 1024 * 1024

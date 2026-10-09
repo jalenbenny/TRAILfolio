@@ -22,6 +22,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -37,6 +40,8 @@ A zero-shot LLaMA-3.1-70B based framework that achieves high precision when mapp
 Indiana University chief complaints data.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

@@ -24,6 +24,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -39,6 +42,8 @@ Applies computer vision to infrared pupillometry video to isolate the melanopsin
 Pupillometry video and derived reflex measurements are not shared because of participant privacy. The repository holds analysis code.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

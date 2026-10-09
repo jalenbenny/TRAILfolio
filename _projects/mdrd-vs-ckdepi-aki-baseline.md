@@ -24,6 +24,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -39,6 +42,8 @@ In Loyola University Medical Center EHR data, a true pre-admission baseline seru
 Loyola University Medical Center EHR data are restricted under IRB and contain PHI, so they are not shared. The repository holds code and documentation.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

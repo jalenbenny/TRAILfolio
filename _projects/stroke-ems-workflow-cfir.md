@@ -25,6 +25,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -40,6 +43,8 @@ related_publications: false
 Transcripts are not shared. The repository holds the interview guide, codebook, and analysis documentation.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

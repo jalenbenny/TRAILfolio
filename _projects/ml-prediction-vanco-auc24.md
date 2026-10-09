@@ -26,6 +26,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -41,6 +44,8 @@ Applies the Vanco24 Bayesian engine to a large MIMIC-IV cohort to generate indiv
 MIMIC-IV requires PhysioNet credentials and a data use agreement. No data in the repository, only code and configs.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

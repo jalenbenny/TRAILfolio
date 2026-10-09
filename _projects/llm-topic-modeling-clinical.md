@@ -21,6 +21,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -36,6 +39,8 @@ Presents a scalable approach for identifying hidden thematic structures in clini
 Loyola data (Therapeutic Inertia dataset).
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 

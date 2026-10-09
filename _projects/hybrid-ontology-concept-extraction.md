@@ -28,6 +28,9 @@ related_publications: false
 
 {% include project_meta.liquid %}
 
+{% assign has_readme = site.data.readmes[page.pid] %}
+{% unless has_readme %}
+
 <div class="proj-block" markdown="1">
 
 ## Summary
@@ -43,6 +46,8 @@ Combines SparkNLP, SentenceBERT embeddings, zero-shot LLMs (LLaMA3-8B and Mistra
 MIMIC-III dataset.
 
 </div>
+
+{% endunless %}
 
 {% include project_readme.liquid %}
 
