@@ -5,6 +5,10 @@ Google Scholar has no API and blocks scripts, so this uses OpenAlex (free, open)
 Entries you wrote by hand stay above the AUTO marker and are never touched.
 Everything below the marker is regenerated on each run.
 
+Only papers co-authored by the lab's PI are kept (the "anchor" in
+publication_authors.json), so members' work from before or outside the lab is left out.
+Pass --all to keep every paper found for every listed person.
+
 Usage (from the repo root):
   python3 scripts/sync_publications.py          # asks before writing
   python3 scripts/sync_publications.py --yes    # no prompt (for automation)
@@ -135,15 +139,27 @@ def main():
         for w in fetch_works(aid):
             works[w["id"]] = w
 
+    anchors = [norm(a["name"]).split()[-1] for a in authors if a.get("anchor")]
+    def in_lab(w):
+        if "--all" in sys.argv or not anchors:
+            return True
+        names = [norm((x.get("author") or {}).get("display_name")) for x in w.get("authorships", [])]
+        return any(n.split() and n.split()[-1] in anchors for n in names)
+
     kept = []
+    skipped = 0
     for w in works.values():
         if (w.get("type") or "") in SKIP_TYPES:
+            continue
+        if not in_lab(w):
+            skipped += 1
             continue
         t = norm(w.get("title") or w.get("display_name"))
         if not t or t in seen:
             continue
         seen.add(t)
         kept.append(w)
+    print(f"\nLeft out {skipped} papers without the PI as an author.")
     kept.sort(key=lambda w: (w.get("publication_year") or 0), reverse=True)
     entries = [e for e in (to_bibtex(w, used) for w in kept) if e]
 
