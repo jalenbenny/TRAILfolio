@@ -77,4 +77,11 @@ profiles:
     more_info: >
       <p><strong>Ben Flowers</strong></p>
       <p>Research Assistant</p>
+  - align: right
+    image: team/hazel.jpg
+    content: team/hazel.md
+    image_circular: false
+    more_info: >
+      <p><strong>Hazel Erturk</strong></p>
+      <p>Lab Member</p>
 ---

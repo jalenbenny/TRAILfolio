@@ -1,0 +1,20 @@
+# Products shown on the Products page: software, models, datasets, and tools the TRAIL Lab has built.
+# Replace the placeholder entries with real products, one block per product.
+# Fields: name, type, status, description, projects (list of project titles), url
+# Suggested types: Software tool, Trained model, Dataset, Ontology, Web app, Code package
+- name: "Placeholder Product (replace me)"
+  type: "Software tool"
+  status: "In development"
+  description: "One or two sentences on what the product does and who it is for, for example a clinical decision support prototype or an NLP pipeline."
+  projects:
+    - "Example project title"
+  url: ""
+  placeholder: true
+- name: "Placeholder Dataset or Model (replace me)"
+  type: "Dataset"
+  status: "Released"
+  description: "Describe what is included, how it can be accessed, and any data use restrictions."
+  projects:
+    - "Example project title"
+  url: ""
+  placeholder: true

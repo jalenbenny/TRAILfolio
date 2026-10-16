@@ -4,12 +4,12 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: TRAIL
-middle_name: Lab /
-last_name: &emdash Dr. Tootooni's Research Lab
+middle_name: ""
+last_name: "(Translational Research and Artificial Intelligence Laboratory)"
 contact_note: >
   Email is the fastest way to reach the lab.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  TRAIL Lab (Dr. Tootooni's Research Lab): AI, NLP, and clinical informatics research at Loyola University Chicago.
+  TRAIL (Translational Research and Artificial Intelligence Laboratory): AI, NLP, and clinical informatics research at Loyola University Chicago.
 footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: TRAIL Lab, clinical informatics, natural language processing, health data science, Loyola University Chicago

@@ -1,0 +1,1 @@
+Hazel Erturk is a data analytics professional with more than five years of experience in Python, SQL, Power BI, and Tableau. She is currently pursuing an MSBA at Loyola University Chicago's Quinlan School of Business. Her research interests span agentic AI, machine learning, and data-driven approaches to healthcare and business analytics.

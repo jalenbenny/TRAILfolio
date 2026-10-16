@@ -40,3 +40,7 @@ lab_members:
     role: Research Assistant
     github: ubeydincer
     tags: [general]
+  - name: Hazel Erturk
+    role: Lab Member
+    github: verturk-hub
+    tags: [general]
