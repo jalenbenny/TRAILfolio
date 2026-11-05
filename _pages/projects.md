@@ -10,8 +10,10 @@ horizontal: false
 
 <style>
   .search-hidden { display: none !important; }
-  .area-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.2rem; }
-  .area-nav a { font-size: 0.8rem; padding: 0.4rem 0.9rem; border-radius: 999px; border: 1px solid rgba(127,127,127,0.35); text-decoration: none; color: inherit; }
+  .area-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin: 0 0 1.2rem; }
+  .area-nav a { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.8rem; line-height: 1.25; padding: 0.5rem 0.8rem; border-radius: 999px; border: 1px solid rgba(127,127,127,0.35); text-decoration: none; color: inherit; }
+  @media (max-width: 1100px) { .area-nav { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 640px) { .area-nav { grid-template-columns: repeat(2, 1fr); } }
   .area-nav a:hover { border-color: #4fa3c7; background: rgba(79,163,199,0.12); }
   .site-search-input { width: 100%; font-size: 0.9rem; padding: 0.5rem 0.9rem; border-radius: 999px; border: 1px solid rgba(127,127,127,0.35); background: rgba(127,127,127,0.06); color: inherit; outline: none; box-sizing: border-box; }
   .site-search-input::placeholder { color: rgba(127,127,127,0.85); font-size: 0.85rem; }
