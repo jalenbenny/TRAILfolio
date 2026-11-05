@@ -1,11 +1,47 @@
-# Collaborator list shown on the collaborators page.
-# Replace the placeholder entry with real collaborators, one block per person.
-# Fields: name, rank, institution, projects (list of project titles), involvement, url
-- name: "Placeholder Collaborator (replace me)"
-  rank: "Professor"
-  institution: "Partner Institution"
-  projects:
-    - "Example project title"
-  involvement: "Describe the role the TRAIL Lab plays, for example data analysis, model development, or co-authorship."
-  url: ""
-  placeholder: true
+# Collaborators shown on the collaborators page, grouped by type.
+# To add one, copy a block under the right group. Fields: name, description. Optional: url.
+
+- title: "Academic and Research Institutions"
+  items:
+    - name: "Mayo Clinic"
+      description: "Longstanding research collaborations involving clinical informatics, artificial intelligence, and the development and evaluation of data-driven approaches to clinical decision-making."
+    - name: "University of Chicago"
+      description: "Collaborative research in biomedical informatics, clinical data science, population health, and translational research."
+    - name: "University of Illinois Chicago (UIC)"
+      description: "Interdisciplinary collaborations involving healthcare analytics, systems engineering, clinical informatics, and AI-based clinical decision support."
+    - name: "Wake Forest University"
+      description: "Collaborative research involving artificial intelligence, cardiovascular informatics, and computational approaches to clinical research."
+    - name: "Indiana University and Regenstrief Institute"
+      description: "Research collaborations involving health informatics, clinical data analysis, and the application of computational methods to healthcare."
+    - name: "Northwestern University"
+      description: "Interdisciplinary research collaborations involving biomedical informatics and quantitative approaches to clinical and healthcare research."
+    - name: "University of Wisconsin–Madison"
+      description: "Academic collaborations involving quantitative methods, healthcare analytics, and interdisciplinary research."
+    - name: "University of Tennessee Health Science Center"
+      description: "Research collaborations involving clinical informatics, data science, and healthcare applications."
+    - name: "DePaul University"
+      description: "Academic collaboration and scholarly exchange related to artificial intelligence, translational research, and healthcare applications."
+    - name: "Lincoln University"
+      description: "Collaborative research and student mentoring activities, providing undergraduate students with opportunities to participate in interdisciplinary research."
+    - name: "University of North Texas"
+      description: "Interdisciplinary collaboration involving quantitative research methods and healthcare applications."
+    - name: "Sorbonne University, France"
+      description: "International academic collaboration involving data science, computational methods, and interdisciplinary research."
+- title: "Healthcare and Public Health Partners"
+  items:
+    - name: "Loyola University Medical Center"
+      description: "Collaboration with clinical researchers and healthcare professionals to address challenges in clinical decision-making, patient care, and healthcare delivery."
+    - name: "Edward Hines Jr. VA Hospital"
+      description: "Collaborative clinical research involving health informatics, healthcare analytics, and applications of data science to patient care."
+    - name: "Edward-Elmhurst Health"
+      description: "Research collaboration with clinical teams, bringing together clinical expertise and quantitative approaches to healthcare research."
+    - name: "Trinity Health"
+      description: "Health-system collaboration and engagement in applied informatics, healthcare data, and interdisciplinary research."
+    - name: "SHIELD Illinois, University of Illinois System"
+      description: "Collaborative public health research involving population-level data analysis, program evaluation, and health equity."
+    - name: "Regional Emergency Medical Services and Fire Departments"
+      description: "Collaboration with prehospital care professionals to support research that addresses operational and clinical challenges in emergency care."
+- title: "Industry Collaborations"
+  items:
+    - name: "EYEONIX MedAIQ"
+      description: "Industry collaboration involving applied research, computational methods, clinical validation, and the development of data-driven technologies."
